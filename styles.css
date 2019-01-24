@@ -87,6 +87,7 @@ h3 {
 p {
 	line-height: 1.5em;
 	padding-bottom: 1em;
+
 }
 
 .line {
@@ -103,9 +104,7 @@ p {
 	text-align:left;  
 }
 
-
 article .line {
-	/* The dividing line inside of the article is darker: */
 	background-color: #483D8B;
 	border-bottom-color: #204656;
 	margin: 1.3em 0;
