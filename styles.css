@@ -1,23 +1,20 @@
 * {
-	/* Universal reset: */
 	margin: 0;
 	padding: 0;
 }
 
 header, footer, article, section, hgroup, nav, figure {
-	/* Giving a display value to the HTML5 rendered elements: */
 	display: block;
 }
 
 body {
-	/* Setting the default text color, size, page background and a font stack: */
-	font-size: 0.825em;
+	font-size: 0.9em;
 	color: #fcfcfc;
 	background-color: #483D8B;
-	font-family: Arial, Helvetica, sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-family:  "Courier New", Courier, monospace
 }
 
-/* Hyperlink Styles: */
 a, a:visited {
 	color: #0196e3;
 	text-decoration: none;
@@ -32,10 +29,10 @@ a img {
 	border: none;
 }
 
-/* Headings: */
 h1, h2, h3 {
-	font-family: "Myriad Pro", "Helvetica Neue", Helvetica, Arial,
-		Sans-Serif;
+	/* font-family:  "Myriad Pro", "Helvetica Neue", Helvetica, Arial, Sans-Serif; */
+	font-family:  "Times New Roman", Times, serif;
+	/*font-family:  "Courier New", Courier, monospace */
 	text-shadow: 0 1px 1px black;
 }
 
@@ -53,7 +50,7 @@ img {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  width: 250px;
+  width: 200px;
 }
 
 
@@ -101,10 +98,6 @@ p {
 }
 
 
-.top-align {
-	text-align:top-align;
-}
-
 article .line {
 	/* The dividing line inside of the article is darker: */
 	background-color: #483D8B;
@@ -128,7 +121,6 @@ nav {
 	box-shadow: 0 1px 1px #333333;
 }
 
-/* The clearfix hack to clear the floats: */
 .clear:after {
 	content: ".";
 	display: block;
@@ -137,7 +129,6 @@ nav {
 	visibility: hidden;
 }
 
-/* The navigation styling: */
 nav ul li {
 	display: inline;
 }
@@ -160,7 +151,6 @@ nav ul li a:hover {
 }
 
 nav, article, nav ul li a, figure {
-	/* Applying CSS3 rounded corners: */
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
