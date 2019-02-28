@@ -121,16 +121,14 @@
 	
 
 img, iframe {max-width:100%;} 
-
+img, object {max-width: 100%;}
 
 /* Structure */
 
-@media screen and (max-width:480px) {
-body, .header, .footer, .navigation {width:320px;}
-.column {margin: 10px 0; border-bottom:1px dashed #7b96bc;}
-.navigation ul li {width: 106.6667px;}  
-#visit, #points, #main {width:320px;}
-}
+
+
+
+
 
 @media screen and (min-width:481px) {
 body, .header, .navigation, .footer {
@@ -172,5 +170,12 @@ body, .header, .navigation, .footer {
   margin: 10px   27.08333%   0   26.04166%;
    width: 460px;
 }
+}
+
+@media screen and (max-width:480px) {
+body, .header, .footer, .navigation {width:320px;}
+.column {margin: 10px 0; border-bottom:1px dashed #7b96bc;}
+.navigation ul li {width: 106.6667px;}  
+#visit, #points, #main {width:320px;}
 }
 
