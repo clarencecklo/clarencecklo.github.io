@@ -156,7 +156,7 @@ img, iframe {max-width:100%;}
 /* Structure */
 
 @media screen and (max-width:480px) {
-body, .header, .footer, .navigation {width:320px;}
+body, .header, .footer, .navigation, .clear {width:320px;}
 .column {margin: 10px 0; border-bottom:1px dashed #7b96bc;}
 .navigation ul li {width: 106.6667px;}  
 #sidebar-left, #points, #main, #footer {width:320px;}
@@ -188,6 +188,11 @@ body, .header, .navigation, .footer {
 .header {
   background:url(images/w.png) no-repeat;
   height: 200px;
+}
+
+.clear {
+	
+	margin: 10px 10px 0 0;
 }
 
 #sidebar-left {
