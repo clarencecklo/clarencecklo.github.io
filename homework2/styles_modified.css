@@ -35,10 +35,10 @@ p {
 		line-height:21px; /* line height sets the vertical spacing between lines of text. */
   
 }
-
+/*
 a, a:visited {
   color: #42628F;
-}
+}*/
 	div.header{
 		background-color:#333; /* a more specific way to set a background color */
 		background-image:url(images/headerbkgd.png); /* sets a background image in the header and the position it should sit */
@@ -66,7 +66,8 @@ a, a:visited {
 		display:inline-block; /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
 		margin:0 3px 5px;	/* this code adds a 3px margin to the left and right of the list elements, and 5px to the bottom of the list elements */
 					}
-					
+
+						
 	ul.navigation li a{
 		background:#4a4a4a;	/* this is a dark grey background for the link */
 		color:#fff;	/* this makes the link text white */
@@ -78,11 +79,10 @@ a, a:visited {
 		text-decoration:none; /* this removes the normal underline that links usually have */
 	}
 						
-
 	ul.navigation li a:hover{
 		background-color:#000; /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
 		
-	}	
+	}
 
 
 
@@ -148,35 +148,7 @@ a, a:visited {
 		clear:both; /* this clears floats.  This would be used to cancel out a float's behavior on content below it.  */
 	}
 	
-.navigation {
-  background-color:#7b96bc;
-  border-bottom: 2px solid #594846;
-}
 
-.navigation ul li {
-  /*text-align: center;
-  display: block;
-  float: left;
-  padding: 0.25em 0;*/
-	display:inline-block; /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
-	margin:0 3px 5px;	/* this code adds a 3px margin to the left and right of the list elements, and 5px to the bottom of the list elements */
-			  
-}
-
-.navigation li a {
-  /*color: #f9f3e9;
-  font-variant: small-caps;
-  text-decoration: none;*/
-		background:#4a4a4a;	/* this is a dark grey background for the link */
-		color:#fff;	/* this makes the link text white */
-		-moz-border-radius:2px; 
-		webkit-border-radius:2px; 
-		border-radius:2px;	/* these 3 lines of border-radius code make rounded corners work in firefox, safari, chrome, opera and IE9 */
-		border:1px solid #595959; /* this adds a light grey solid border of 1px width around the link */
-		padding:3px 10px;	/* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
-		text-decoration:none; /* this removes the normal underline that links usually have */
-  
-}
 
 .header p {
   margin-left: -1000px;
@@ -208,8 +180,10 @@ img, iframe {max-width:100%;}
 body, .header, .footer, .navigation {width:320px;}
 .column {margin: 10px 0; border-bottom:1px dashed #7b96bc;}
 .navigation ul li {width: 106.6667px;}  
-#sidebar-left, #points, #main {width:320px;}
+#sidebar-left, #points, #main, #footer {width:320px;}
 }
+
+
 
 @media screen and (min-width:481px) {
 body, .header, .navigation, .footer {
@@ -250,5 +224,11 @@ body, .header, .navigation, .footer {
 #main {
   margin: 10px   27.08333%   0   26.04166%;
    width: 460px;
+}
+
+#footer {
+	width: 25%;
+  float: left;
+	
 }
 }
