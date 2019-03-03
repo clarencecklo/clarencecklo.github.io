@@ -2,11 +2,11 @@
 
 
 /* Reset */
-
+/*
 * {
 	margin: 0;
 	padding: 0;   
-}
+}*/
 
 /**
  * Color, typography and basic layout
@@ -92,9 +92,8 @@ a, a:visited {
 	}		
 		
 	div.main{
-		float:left;
-		padding:0 10px;
-		width:200px;	/* when floating content next to each other, applying set widths will make the content play nice with each other. Change the width of the siebar, or take away the width of the above "div.col-right" and see what happens to get a better idea of how widths effect floats */
+		float:right;
+		width:660px
 		}
 
 	div.sidebar-left{
@@ -150,27 +149,7 @@ a, a:visited {
 	
 
 
-.header p {
-  margin-left: -1000px;
-}
 
-#points ul {
-  list-style-image: url('images/point.png');
-  margin: 0.5em 0 1em 0.5em;
-  padding-left: 1em;
-}
-
-#points ul li {
-  margin: 0.5em 1em;
-}
-
-.footer {
-  background-color: #7b96bc;
-  color: #f9f3e9;
-  text-align: center;
-  padding: .5em 0;
-  font-style: italic;
-}
 
 img, iframe {max-width:100%;} 
 
