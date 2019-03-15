@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang=en>
+
+<head>
+	<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+	<script src="detectmobilebrowser.js"></script>   
+  <title>CIS128 - Short Task 1: Desktop Version</title>
+  <link rel="stylesheet" type="text/css" href="styles_desktop.css" /> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+
+</head>
+
+<body>
+
+  <h1>This is the desktop version of my web page!</h1>
+
+  
+<p id="id1"></p>
+<script>
+if (jQuery.browser.mobile)
+{
+   $("#id1").text("You are using a mobile device"); 
+   document.location = "mobile.html";
+}
+else
+{
+   $("#id1").text("You are not using a mobile device");
+}
+</script>
+
+
+  <dl>          
+    <dt>WURFL.is_mobile</dt>
+    <dd>
+		<h2>is_mobile - Virtual capability</h2>
+		<li>This is an ALIAS for is_wireless_device. True if a device is wireless (WiFi, 3G, LTE etc.). 
+		Specifically a mobile phone or a tablet are considered as wireless devices, but a desktop PC or a laptop are not.</li>
+		<li>Category: virtual</li>
+		<li>Related Capabilities: is_wireless_device, controlcap_is_mobile</li>
+		<li>Popularity: 5 stars</li>
+		<li>WURFL products: WURFL OnSite Device Detection, WURFL InFuze, WURFL.js, WURFL InSight, WURFL Cloud, WURFL Microservice for AWS, WURFL Microservice for Docker </li>
+		<li>Plan: Basic Pro Standard</li>
+		<li>Premium: No</li>
+		<li>Value type: boolean</li>		
+	</dd>
+             
+    <dt>WURFL.form_factor</dt>
+    <dd>
+		<h2>form_factor - Virtual capability</h2>
+		<li>Returns the device's form factor based on categorization provided by multiple capability tests</li>
+		<li>Category: virtual</li>
+		<li>Possible Values: Desktop, Tablet, Smartphone, Feature Phone, Smart-TV, Robot, Other non-Mobile, Other Mobile</li>
+		<li>Related Capabilities: controlcap_form_factor</li>
+		<li>Popularity: 5 starts</li>
+		<li>WURFL products: WURFL OnSite Device Detection, WURFL InFuze, WURFL.js, WURFL InSight, WURFL Cloud, WURFL Microservice for AWS, WURFL Microservice for Docker</li>
+		<li>Plan: Basic Pro Standard</li>
+		<li>Premium: No</li>
+		<li>Value type: string</li>			
+	</dd>
+                 
+    <dt>WURFL.complete_device_name</dt>
+    <dd>
+		<h2>complete_device_name - Virtual capability</h2>
+		<li>Concatenates brand name, model name and marketing name (where available) of a device into a single string.</li>
+
+		<li>Category: virtual</li>
+		<li>Related Capabilities: controlcap_complete_device_name</li>
+		<li>Popularity: 5 starts </li> 
+		<li>WURFL products: WURFL OnSite Device Detection, WURFL InFuze, WURFL.js, WURFL InSight, WURFL Cloud, WURFL Microservice for AWS, WURFL Microservice for Docker</li>
+		<li>Plan: Basic Pro Standard</li>
+		<li>Premium: No</li>
+		<li>Value type: string</li>		
+	</dd>
+                 
+  </dl>
+
+</body>
+
+</html>
