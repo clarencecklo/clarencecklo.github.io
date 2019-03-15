@@ -4,33 +4,22 @@
 
 <head>
 
-	<script src="detectmobilebrowser.js"></script>   
   <title>CIS128 - Short Task 1: Desktop Version</title>
   <link rel="stylesheet" type="text/css" href="styles_desktop.css" /> 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+
+
+<script>
+if(window.screen.width < 480) {
+window.location.href = "mobile.html";
+}
+</script>
 
 </head>
 
 <body>
 
   <h1>This is the desktop version of my web page!</h1>
-
-  
-<p id="id1"></p>
-<script>
-if (jQuery.browser.mobile)
-{
-   $("#id1").text("You are using a mobile device"); 
-      document.location = "mobile.html";
-}
-else
-{
-   $("#id1").text("You are not using a mobile device");
-   
-
-}
-</script>
-
 
   <dl>          
     <dt>WURFL.is_mobile</dt>
