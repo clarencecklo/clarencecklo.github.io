@@ -1,4 +1,5 @@
-﻿* {
+﻿
+* {
   padding: 0;
   margin: 0;
 }
@@ -12,6 +13,8 @@ body {
   background-position: 50% 0px;
 }
 
+  
+
   dl {
     display: flex;
     flex-flow: row wrap;
@@ -24,7 +27,8 @@ body {
     background:#5f9be3;	
     text-align: left;
     color: #fff;
-	border: 1px solid #333;
+	border:  1px solid #333;
+	 
   }
   dd {
     flex-basis: 65%;
