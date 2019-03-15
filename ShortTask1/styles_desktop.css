@@ -1,4 +1,7 @@
-﻿/*DL, DT, DD TAGS LIST DATA*/
+﻿* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
   font-family: "Helvetica", "Arial", san-serif;
@@ -8,24 +11,26 @@ body {
   background-repeat: no-repeat;
   background-position: 50% 0px;
 }
+
   dl {
     display: flex;
     flex-flow: row wrap;
-    border: solid #333;
+    border:  #333;
     border-width: 1px 1px 0 0;
   }
   dt {
-    flex-basis: 15%;
-	padding: 1px 2px;
+    flex-basis: 25%;
+	padding: 1px 1px;
     background:#5f9be3;	
     text-align: left;
     color: #fff;
-	border: solid #333;
+	border: 1px solid #333;
   }
   dd {
-    flex-basis: 80%;
+    flex-basis: 65%;
     flex-grow: 1;
     margin: 0;
-    padding: 1px 2px;
-    border: solid #333;
+    padding: 1px 1px;
+    border: 1px solid #333;
   }
+  
