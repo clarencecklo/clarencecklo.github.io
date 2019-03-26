@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>CIS128 Homework3 - Home</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	
+</head>
+
+<body>
+  
+
+    <!-- This is the first page -->
+    <section id="page1" data-role="page">
+        <header data-role="header">
+        
+
+		<div data-role="header" style="overflow:hidden;">
+		<h1>ABC Toys</h1>
+		<div data-role="navbar" data-iconpos="right">
+			<ul>
+				<li><button data-icon="home">Home</button></li>
+				<li><button data-icon="grid" data-theme="b">Two</button></li>
+				<li><button data-icon="search">Three</button></li>
+			</ul>
+		</div><!-- /navbar -->
+		</div><!-- /header -->
+		
+		
+        </header>
+        <div data-role="content">
+		
+        <p>This is the Home page of ABC Toys web app.</p>
+
+        <a href="#page2" class="ui-btn">Second Page</a>		
+		<a href="contactus.html" rel="external" data-role="button" class="ui-btn-right">Contact us</a>		
+		<a href="extpage2.html" rel="external" class="ui-btn">Link to External Page 2</a>
+		<a href="http://www.google.com" class="ui-btn">Google Website</a>	
+<p><a href="#page2" data-transition="fade">Fade to second page</a></p>
+<p><a href="#page2" data-transition="flip">Flip to second page</a></p>
+<p><a href="#page2" data-transition="pop">Pop to second page</a></p>
+<p><a href="#page2" data-transition="slide">Slide to second page</a></p>
+<p><a href="#page2" data-transition="slidedown">Slide down to second page</a></p>
+<p><a href="#page2" data-transition="slideup">Slide up to second page</a></p>		
+        </div>
+        <footer data-role="footer">My footer</footer>
+    </section>
+
+    <!-- This is the second page -->
+    <div id="page2" data-role="page" data-theme="b">
+        <header data-role="header">
+        <h1>Page 2 Header</h1>
+        </header>
+        <div data-role="content">
+        <p>This is the second page of our web app.</p>
+        <p><a href="#page1">Go to first page</a></p>
+        </div>
+        <div data-role="footer">Page 2 Footer</div>
+    </div>
+</body>
+</html>
+
+
+<!--
+
+<h1>ABC Toys</h1>
+<h3>Making learning fun</h3>
+  
+
+<p>ABC Toys is a company that opened its doors in 2001 and it has kept its mission for all those years.</p>
+<p>The mission of our company is to create toys that are safe for kindergarten kids but that challenge the kids' mind and motor skills making learning a fun task.</p>
+<p>By the way, parents love our toys too</p>
+
+
+</body>
+
+</html>
+-->
