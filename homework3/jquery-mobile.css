@@ -17,3 +17,12 @@ text-align:center;
 span{
 color:red;
 }
+
+
+a[href^="mailto"]::before {
+    content: "📧 ";
+}
+
+a[href^="tel"]::before {
+    content: "📞 ";
+}
