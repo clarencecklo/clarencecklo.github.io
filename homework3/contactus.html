@@ -10,10 +10,10 @@
 	<script src="jquery-mobile.js"></script>
 </head>
 <body>	
-	<section id="page1" data-role="page">
+	<div data-role="page">
 		<header data-role="header">  
 		<div data-role="header">		
-			<h1>ABC Toys</h1>
+			<h1>ABC Toys - Contact us</h1>
 			<div data-role="navbar" data-iconpos="right">
 				<ul>			
 					<li><a href="index.html" data-role="button" data-icon="Home">Home</a></li>
@@ -21,14 +21,11 @@
 					<li><a href="product.html" data-role="button" data-icon="shop">Products</a></li>
 					<li><a href="location.html" data-role="button" data-icon="location">Location</a></li>				
 				</ul>
-			</div><!-- /navbar -->		
+			</div><!-- /navbar -->	
+			<h1>Contact us</h1>			
 		</div><!-- /header -->		
 		</header>
-		
-	<div data-role="header">
-		<h1>Contact us</h1>
-	</div>
-		
+			
 		<address>
 		  <p>Email: <a href="mailto:contactus@abctoys.com">contactus@abctoys.com</a><p/>
 		  <p>Telephone: <a href="tel:+14151234567">415-123-4567</a></p>
@@ -88,16 +85,17 @@
 				<label for="other">Other</label>
 					<input type="checkbox" id="other" value="other">
 			</fieldset>
-			
-			
-			
+						
 				<label for="info">Message:</label>
 					<textarea name="addinfo" id="info" placeholder="Message"></textarea>
-				<input type="submit" data-inline="true" value="Submit" data-theme="b">
+			
+			<input type="submit" data-inline="true" value="Submit" data-theme="b">
 		</form>
 		</div>
-        <footer data-role="footer">My footer</footer>
-    </section>		
+	</div>	
+		
+    <footer data-role="footer">My footer</footer>
+	
 		
 <!-------------------------------------------------------------
 End of First page
@@ -106,10 +104,18 @@ End of First page
 	<div data-role="page" id="pageone">
 <!-------------- Second page header ----------->
 	<div data-role="header">
-		<h1>JQuery Mobile Form</h1>
+		<h1>ABC Toys - Contact us</h1>
+			<div data-role="navbar" data-iconpos="right">
+				<ul>			
+					<li><a href="index.html" data-role="button" data-icon="Home">Home</a></li>
+					<li><a href="contactus.html" data-role="button" data-theme="b" data-icon="info">Contact us</a></li>
+					<li><a href="product.html" data-role="button" data-icon="shop">Products</a></li>
+					<li><a href="location.html" data-role="button" data-icon="location">Location</a></li>				
+				</ul>
+			</div><!-- /navbar -->			
 	</div>
 <!-------------- Second page main content ----------->
-	<div data-role="main" class="ui-content">
+	<div data-role="main" class="ui-content">			
 		<h2>Form Submitted Successfully...!!</h2>
 	</div>
 	</div>

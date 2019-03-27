@@ -10,10 +10,10 @@
 	<script src="jquery-mobile.js"></script>
 </head>
 <body>      
-    <section id="page1" data-role="page">
+    <div data-role="page">
         <header data-role="header">        
 		<div data-role="header">
-			<h1>ABC Toys</h1>
+			<h1>ABC Toys - Home</h1>
 			<div data-role="navbar" data-iconpos="right">
 				<ul>
 					<li><a href="index.html" data-role="button" data-theme="b" data-icon="Home">Home</a></li>
@@ -22,14 +22,11 @@
 					<li><a href="location.html" data-role="button" data-icon="location">Location</a></li>				
 				</ul>			
 			</div><!-- /navbar -->
+			<h1>Home</h1>
 		</div><!-- /header -->		
         </header>
-
-		<div data-role="header">
-			<h1>Home</h1>
-		</div>
 				
-        <div data-role="content">
+		<div data-role="main" class="ui-content">	
 		
 			<p>This is the Home page of ABC Toys web app.</p>
 			<h1>ABC Toys</h1>
@@ -40,10 +37,8 @@
 			<p>By the way, parents love our toys too</p>
 			
         </div>
-        <footer data-role="footer">My footer</footer>
-    </section>
-
-
+	</div>	
+	<footer data-role="footer">My footer</footer>
 </body>
 </html>
 
