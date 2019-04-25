@@ -26,8 +26,29 @@
 		
 		<div data-role="main" class="ui-content">	
 			<p>When we open our store, we will let you know our location here even with directions from your place to it!!!</p>
+			<p>Your current location is:</p>
+			<p id="location"></p>	
 		</div>
     	</div>	
+
+	
+<script>
+var x = document.getElementById("location");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+window.onload = getLocation();
+</script>		
 </body>
 </html>
 
