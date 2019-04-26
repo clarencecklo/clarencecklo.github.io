@@ -1,13 +1,12 @@
 
 body { 
 	font-size: 1.2em; 
-	font-family: Arial, Verdana, serif; 
-	background-color: #FFFFFF; 
+	font-family: Arial, Verdana, serif; 	
 	background-image:url(images/lightblue.jpg);
 }
 
 h1 { 
-	color: red; 
+	color: blue; 
 	text-align:center; 
 	font-style: italic; 
 }
