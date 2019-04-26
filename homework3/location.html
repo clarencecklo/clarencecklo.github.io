@@ -37,9 +37,9 @@
     	</div>	
 
 	
-	<div data-role="page" id="Map" data-add-back-btn="true">
+	<div data-role="page" id="Map" data-add-back-btn="true" data-back-btn-text="Back">
 	  <div data-role="header">
-	    <h1>Here is your location:</h1>
+	    <h1>Your location:</h1>
 	  </div>
 	  <div data-role="content">
 	  </div>
@@ -61,7 +61,7 @@ $("#btn").bind ("click", function (event)
   var lng = $("#lng").val ();
   var latlng = new google.maps.LatLng (lat, lng);
   var options = { 
-    zoom : 16, 
+    zoom : 15, 
     center : latlng, 
     mapTypeId : google.maps.MapTypeId.ROADMAP 
   };
