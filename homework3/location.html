@@ -42,7 +42,7 @@
 	
 	<div data-role="page" id="win2" data-add-back-btn="true">
 	  <div data-role="header">
-	    <h1>Window 2</h1>
+	    <h1>Here is your location:</h1>
 	  </div>
 	  <div data-role="content">
 	  </div>
@@ -64,7 +64,7 @@ $("#btn").bind ("click", function (event)
   var lng = $("#lng").val ();
   var latlng = new google.maps.LatLng (lat, lng);
   var options = { 
-    zoom : 15, 
+    zoom : 16, 
     center : latlng, 
     mapTypeId : google.maps.MapTypeId.ROADMAP 
   };
