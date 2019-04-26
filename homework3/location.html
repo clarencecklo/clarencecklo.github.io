@@ -8,10 +8,7 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="jquery-mobile.css">
 	<script src="jquery-mobile.js"></script>			
-	<script src=https://maps.googleapis.com/maps/api/js?sensor=true></script>
-
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHfoYzu4cZMnyQZcZ0K1R8N8sFXJxLySo"></script>
-
+	<script src=https://maps.googleapis.com/maps/api/js?sensor=true></script>	
 
 </head>
 <body>
@@ -40,7 +37,7 @@
     	</div>	
 
 	
-	<div data-role="page" id="win2" data-add-back-btn="true">
+	<div data-role="page" id="Map" data-add-back-btn="true">
 	  <div data-role="header">
 	    <h1>Here is your location:</h1>
 	  </div>
@@ -68,10 +65,10 @@ $("#btn").bind ("click", function (event)
     center : latlng, 
     mapTypeId : google.maps.MapTypeId.ROADMAP 
   };
-  var $content = $("#win2 div:jqmData(role=content)");
+  var $content = $("#Map div:jqmData(role=content)");
   $content.height (screen.height - 50);
   var map = new google.maps.Map ($content[0], options);
-  $.mobile.changePage ($("#win2"));
+  $.mobile.changePage ($("#Map"));
   
   new google.maps.Marker ( 
   { 
