@@ -1,9 +1,13 @@
-<!DOCTYPE html>
-<html lang="en" <html manifest=”mycache.appcache”>>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-     <script>
+<!doctype html>
+<html lang="en" manifest=”mycache.appcache”>     
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Simple use of Service Worker">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>PWA (Progressive Web Application)</title>
+    <script>
       // Add a global error event listener early on in the page load, to help ensure that browsers
       // which don't support specific functionality still end up displaying a meaningful message.
       window.addEventListener('error', function(error) {
@@ -15,12 +19,13 @@
       });
     </script>
     
-<link rel="stylesheet" type="text/css" href="style.css" />
-<title>PWA (Progressive Web Application)</title>
-</head>
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
 
-<body>
-    <div id="header">
+  <body>
+    
+ <div id="header">
         <h1>Welcome to PWA (Progressive Web Application) world</h1>
         <h2>The main characteristics of a PWA (Progressive Web Application)</h2>        
     </div>
@@ -48,24 +53,19 @@ type of app store. These applications offer a very rich experience with the help
 re-engage users with web push notifications. The manifest file allows you to control how your app appears and how
 it’s launched (home screen icons to be shown, the page to load when the app is launched, the screen orientation,
 etc.).</p>
-     
-         <p></p>
+              
     </div>
-
-<div class="col-left">
- <label for="images">Select the type of background:</label>
-    <select id="images">     
-      <option value=""">- Select - </option>
-      <option style="background-image:url(images/lightblue.jpg);">light blue</option>
-      <option style="background-image:url(images/lightgold.jpg);">light gold</option>      
-                                                                 
+         
+    <h3>Demo with images</h3>
+    <p>The first time you request one of the images, the service worker will be load it from the network, but the next time, it will be retrieved from the cache.</p>
+    <label for="images">Choose the Image to be shown:</label>
+    <select id="images">
+      <option value="images/rain.png">Rain Symbol</option>
+      <option value="images/scattered-showers.png">Scattered Showers Symbol</option>
+      <option value="images/snow.png">Snow Symbol</option>
     </select>
-    <button id="show">Change</button>
-         </div>
-
-<div class="col-left">         
+    <button id="show">Show Icon Selected</button>
     <div id="container"></div>
-         </div>     
     
       <script>
         if ('serviceWorker' in navigator) {
@@ -78,15 +78,7 @@ etc.).</p>
           imgElement.src = iconUrl;
           document.querySelector('#container').appendChild(imgElement);
         });
-      </script>        
-        
-        
-        
-        
-    <br class="clear" />  <!-- this code is clearing the floats from the above divs.  See what happens when you take it away to really learn what clear does... -->
-    </div>
-    <div id="footer">
-        <p>We believe PWA will be the future</p>
-    </div>
-</body>
+      </script>
+
+  </body>
 </html>
