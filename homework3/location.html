@@ -8,6 +8,26 @@
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="jquery-mobile.css">
 	<script src="jquery-mobile.js"></script>	
+
+	<script type="text/javascript">
+	    function showPosition(){
+        	navigator.geolocation.getCurrentPosition(showMap);
+    	}
+    
+    		function showMap(position){
+        	// Get location data
+        	var latlong = position.coords.latitude + "," + position.coords.longitude;
+        
+        	// Set Google map source url
+        	var mapLink = "https://maps.googleapis.com/maps/api/staticmap?center="+latlong+"&zoom=16&size=400x300&output=embed";
+        
+        	// Create and insert Google map
+        	document.getElementById("embedMap").innerHTML = "<img alt='Map Holder' src='"+ mapLink +"'>";
+    	}
+	
+		window.onload = showPosition();
+	</script>
+	
 </head>
 <body>
 	<div data-role="page">            
@@ -29,26 +49,14 @@
 			<p>Your current location is:</p>
 			<p id="location"></p>	
 		</div>
+
+		<div id="embedMap">
+        		<!--Google map will be embedded here-->
+    		</div>
     	</div>	
 
 	
-<script>
-var x = document.getElementById("location");
 
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-window.onload = getLocation();
-</script>		
 </body>
 </html>
 
