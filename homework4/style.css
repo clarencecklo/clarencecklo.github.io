@@ -2,7 +2,8 @@
 body { 
 	font-size: 1.2em; 
 	font-family: Arial, Verdana, serif; 
-	background-color: #CCCCCC; 
+	background-color: #FFFFFF; 
+	background-image:url(images/lightblue.jpg);
 }
 
 h1 { 
