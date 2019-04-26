@@ -7,26 +7,46 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<link rel="stylesheet" href="jquery-mobile.css">
-	<script src="jquery-mobile.js"></script>	
+	<script src="jquery-mobile.js"></script>			
 
-	<script type="text/javascript">
-	    function showPosition(){
-        	navigator.geolocation.getCurrentPosition(showMap);
-    	}
-    
-    		function showMap(position){
-        	// Get location data
-        	var latlong = position.coords.latitude + "," + position.coords.longitude;
-        
-        	// Set Google map source url
-        	var mapLink = "https://maps.googleapis.com/maps/api/staticmap?center="+latlong+"&zoom=16&size=400x300&output=embed&key=AIzaSyCHfoYzu4cZMnyQZcZ0K1R8N8sFXJxLySo";			 
-        
-        	// Create and insert Google map
-        	document.getElementById("embedMap").innerHTML = "<img alt='Map Holder' src='"+ mapLink +"'>";
-    	}
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHfoYzu4cZMnyQZcZ0K1R8N8sFXJxLySo"></script>
 	
-		window.onload = showPosition();
-	</script>
+    <script>
+      // In the following example, markers appear when the user clicks on the map.
+      // Each marker is labeled with a single alphabetical character.
+      var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      var labelIndex = 0;
+
+      function initialize() {
+        var bangalore = { lat: 12.97, lng: 77.59 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: bangalore
+        });
+
+        // This event listener calls addMarker() when the map is clicked.
+        google.maps.event.addListener(map, 'click', function(event) {
+          addMarker(event.latLng, map);
+        });
+
+        // Add a marker at the center of the map.
+        addMarker(bangalore, map);
+      }
+
+      // Adds a marker to the map.
+      function addMarker(location, map) {
+        // Add the marker at the clicked location, and add the next-available label
+        // from the array of alphabetical characters.
+        var marker = new google.maps.Marker({
+          position: location,
+          label: labels[labelIndex++ % labels.length],
+          map: map
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+	
 	
 </head>
 <body>
@@ -50,9 +70,10 @@
 			<p id="location"></p>	
 		</div>
 
-		<div data-role="footer" class="ui-content" align="center" id="embedMap">
+		<div data-role="footer" class="ui-content" align="center" id="map">
         		<!--Google map will be embedded here-->
     		</div>
+		
     	</div>	
 
 	
