@@ -11,7 +11,10 @@ const PRECACHE_URLS = [
   'styles.css',
   'images/scattered-showers.png',
   'images/snow.png',
-  'images/rain.png'
+  'images/rain.png',
+  'images/lightblue.jpg',
+  'images/lightgold.jpg',
+  'images/white.jpg'  
 ];
 
 // The install handler takes care of precaching the resources we always need.
