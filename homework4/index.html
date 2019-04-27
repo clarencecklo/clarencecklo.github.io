@@ -17,14 +17,8 @@
           error.preventDefault();
         }
       });
-    </script>
-
-    
-    
-    <link rel="stylesheet" href="style.css">
-    
-
-    
+    </script>        
+    <link rel="stylesheet" href="style.css">       
   </head>
 
   <body>
@@ -68,8 +62,7 @@ etc.).</p>
       <option value="images/lightblue.jpg">lightblue</option>
       <option value="images/lightgold.jpg">lightgold</option>
     </select>
-    <button id="show">Show Icon Selected</button>
-    <div id="container"></div>
+    <button id="show">Change backgroup image</button>
     
       <script>
         if ('serviceWorker' in navigator) {
@@ -77,20 +70,15 @@ etc.).</p>
         }
 
         document.querySelector('#show').addEventListener('click', () => {
-          const iconUrl = document.querySelector('select').selectedOptions[0].value;
-
-			if (iconUrl == 'images/lightblue.jpg' ){
-			  	document.body.style.backgroundImage = "url('images/lightblue.jpg')";
-			} else if (iconUrl == 'images/lightgold.jpg' ){
-				document.body.style.backgroundImage = "url('images/lightgold.jpg')";
-			} else {
-				document.body.style.backgroundcolor = "#FFFFFF";
-			}		        
-        });
-
-
-
-		
+        const iconUrl = document.querySelector('select').selectedOptions[0].value;
+		if (iconUrl == 'images/lightblue.jpg' ){
+			document.body.style.backgroundImage = "url('images/lightblue.jpg')";
+		} else if (iconUrl == 'images/lightgold.jpg' ){
+			document.body.style.backgroundImage = "url('images/lightgold.jpg')";
+		} else {
+			document.body.style.backgroundcolor = "#FFFFFF";
+		}		        
+        });		
       </script>
 
   </body>
