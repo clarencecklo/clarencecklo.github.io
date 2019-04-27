@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta name=viewport content="user-scalable=no,width=device-width" />
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.css" />
+  <script src="https://code.jquery.com/jquery-1.6.4.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.0rc1/jquery.mobile-1.0rc1.min.js"></script>
+  <script src=https://maps.googleapis.com/maps/api/js?sensor=true></script>
+</head> 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+
+$(function() {
+var body = $(‘body’);
+var backgrounds = new Array(
+‘url(image1.jpeg)’,
+‘url(image2.jpeg)’,
+‘url(image3.jpeg)’
+);
+var current = 0;
+function nextBackground() {
+body.css(
+‘background’,
+backgrounds[current = ++current % backgrounds.length]
+);
+
+setTimeout(nextBackground, 10000);
+}
+setTimeout(nextBackground, 10000);
+body.css(‘background’, backgrounds[0]);
+});
+</Script>
+</head>
+<body id="body">
+</body>
+<footer></footer>
