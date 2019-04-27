@@ -75,7 +75,9 @@ etc.).</p>
           navigator.serviceWorker.register('service-worker.js');
         }
 
-		const iconUrl1 = document.getElementById("images").value;
+	      document.querySelector('#show').addEventListener('click', () => {
+		      
+		var iconUrl1 = document.getElementById("images").value;
 		if (iconUrl1 == 'images/lightblue.jpg' ){
 			document.body.style.backgroundImage = "url('images/lightblue.jpg')";
 		} else if (iconUrl1 == 'images/lightgold.jpg' ){
