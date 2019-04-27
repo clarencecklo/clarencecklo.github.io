@@ -61,8 +61,8 @@ etc.).</p>
     <label for="images">Choose the Image to be shown:</label>
     <select id="images">    
       <option value="">------</option>
-      <option value="images/lightblue.jpg">lightblue</option>
-      <option value="images/lightgold.jpg">lightgold</option>
+      <option value="images/lightblue.jpg">light blue</option>
+      <option value="images/lightgold.jpg">light gold</option>
     </select>
     <button id="show">Change backgroup image</button>
 
@@ -71,6 +71,8 @@ etc.).</p>
     <option value="red">Red</option>
     <option value="ivory">Ivory</option>
     <option value="pink">Pink</option>
+    <option value="green">Green</option>
+    <option value="blue">Blue</option>
 </select>
 	  
       <script>
@@ -85,7 +87,7 @@ etc.).</p>
 		} else if (iconUrl == 'images/lightgold.jpg' ){
 			document.body.style.backgroundImage = "url('images/lightgold.jpg')";
 		} else {
-			document.body.style.backgroundcolor = "#FFFFFF";
+			document.body.style.backgroundcolor = #FFFFFF;
 		}		        
         });		
 
