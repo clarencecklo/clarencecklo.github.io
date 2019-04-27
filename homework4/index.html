@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">     
+<html lang="en" manifest=”mycache.appcache”>     
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>PWA (Progressive Web Application) characteristics</title>
-      
+    <script>
+      // Add a global error event listener early on in the page load, to help ensure that browsers
+      // which don't support specific functionality still end up displaying a meaningful message.
+      window.addEventListener('error', function(error) {
+        if (ChromeSamples && ChromeSamples.setStatus) {
+          console.error(error);
+          ChromeSamples.setStatus(error.message + ' (Your browser may not support this feature.)');
+          error.preventDefault();
+        }
+      });
+    </script>
+
+    
+    
     <link rel="stylesheet" href="style.css">
     
  <style>   
@@ -65,6 +78,28 @@ etc.).</p>
     <button id="show">Show Icon Selected</button>
     <div id="container"></div>
     
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js');
+        }
+
+        document.querySelector('#show').addEventListener('click', () => {
+          const iconUrl = document.querySelector('select').selectedOptions[0].value;
+
+			if (iconUrl == 'images/lightblue.jpg' ){
+			  document.body.style.backgroundImage = "url('images/lightblue.jpg')";
+			  } else
+			  {
+				document.body.style.backgroundImage = "url('images/lightgold.jpg')";
+				}
+
+        
+        });
+
+
+
+		
+      </script>
 
   </body>
 </html>
