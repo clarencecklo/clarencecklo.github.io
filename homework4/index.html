@@ -17,6 +17,8 @@
           error.preventDefault();
         }
       });
+	    
+	document.body.style.backgroundColor = "#ff0000";  // red	    
     </script>        
     <link rel="stylesheet" href="style.css">       
   </head>
@@ -63,7 +65,14 @@ etc.).</p>
       <option value="images/lightgold.jpg">lightgold</option>
     </select>
     <button id="show">Change backgroup image</button>
-    
+
+<select id="bgchoice" onchange="changeBG()">
+    <option></option>
+    <option value="red">Red</option>
+    <option value="ivory">Ivory</option>
+    <option value="pink">Pink</option>
+</select>
+	  
       <script>
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('service-worker.js');
@@ -79,6 +88,12 @@ etc.).</p>
 			document.body.style.backgroundcolor = "#FFFFFF";
 		}		        
         });		
+
+	      function changeBG() {
+  			var selectedBGColor = document.getElementById("bgchoice").value;
+  			document.body.style.backgroundColor = selectedBGColor;
+		}
+	      
       </script>
 	    
   </body>
