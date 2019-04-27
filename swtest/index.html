@@ -32,12 +32,14 @@
     <p>The first time you request one of the images, the service worker will be load it from the network, but the next time, it will be retrieved from the cache.</p>
     <label for="images">Choose the Image to be shown:</label>
     <select id="images">
-      <option value="images/rain.png">Rain Symbol</option>
-      <option value="images/scattered-showers.png">Scattered Showers Symbol</option>
-      <option value="images/snow.png">Snow Symbol</option>
+      <option value="images/white.jpg">White</option>
+      <option value="images/lightblue.jpg">light blue</option>
+      <option value="images/lightgold.jpg">light gold</option>
     </select>
-    <button id="show">Show Icon Selected</button>
+    <button id="show">Change backgroup image</button>
     <div id="container"></div>
+
+  
     
       <script>
         if ('serviceWorker' in navigator) {
@@ -49,6 +51,17 @@
           let imgElement = document.createElement('img');
           imgElement.src = iconUrl;
           document.querySelector('#container').appendChild(imgElement);
+
+          
+          		var iconUrl1 = document.getElementById("images").value;
+		if (iconUrl1 == 'images/lightblue.jpg' ){
+			document.body.style.backgroundImage = "url('images/lightblue.jpg')";
+		} else if (iconUrl1 == 'images/lightgold.jpg' ){
+			document.body.style.backgroundImage = "url('images/lightgold.jpg')";
+		} else if (iconUrl1 == 'images/white.jpg' ){			
+			document.body.style.backgroundImage = "url('images/white.jpg')";
+		}	
+          
         });
       </script>
 
