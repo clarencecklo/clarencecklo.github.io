@@ -13,7 +13,8 @@ const PRECACHE_URLS = [
   'images/snow.png',
   'images/rain.png',  
   'images/lightblue.jpg',
-  'images/lightgold.jpg'  
+  'images/lightgold.jpg',
+  'images/white.jpg'
 ];
 
 // The install handler takes care of precaching the resources we always need.
