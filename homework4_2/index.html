@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="PWA (Progressive Web Application) characteristics">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>PWA (Progressive Web Application) characteristics</title>
+    <script>
+      // Add a global error event listener early on in the page load, to help ensure that browsers
+      // which don't support specific functionality still end up displaying a meaningful message.
+      window.addEventListener('error', function(error) {
+        if (ChromeSamples && ChromeSamples.setStatus) {
+          console.error(error);
+          ChromeSamples.setStatus(error.message + ' (Your browser may not support this feature.)');
+          error.preventDefault();
+        }
+      });
+	  document.body.style.backgroundColor = "#FFFFFF";  // white
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+
+  <body>
+ <div id="header">
+        <h1>Welcome to PWA (Progressive Web Application) world</h1>
+        <h2>The main characteristics of a PWA (Progressive Web Application)</h2>        
+    </div>
+    
+    <div class="content">
+    
+    <div class="col-left">
+        
+        <h1>Reliable</h1><br />
+        <p>It means that when the app is launched, the PWA will load instantly, regardless of the network state – we
+previously saw the using of Service Workers, written in JavaScript that will pre-cache key resources of the application
+thus eliminating the dependence on the network and making sure that the user will have an instant and reliable
+experience.</p>
+
+
+        <h1>Fast</h1><br />
+        <p>According to some studies, 53% of users will abandon a site that takes longer than 3 seconds to load! And even
+when the application/site is loaded, the users expect them to be fast with no slow-to-respond interfaces.
+</p>
+
+
+        <h1>Engaging</h1><br />
+        <p>Users are able to install PWA’s and those will live on the user’s home screen without the need for any
+type of app store. These applications offer a very rich experience with the help from a web app manifest file and can
+re-engage users with web push notifications. The manifest file allows you to control how your app appears and how
+it’s launched (home screen icons to be shown, the page to load when the app is launched, the screen orientation,
+etc.).</p>
+              
+    </div>
+         
+	  </div>
+
+    <h3>Demo 1 with images</h3>
+    <p>The first time you request one of the images, the service worker will be load it from the network, but the next time, it will be retrieved from the cache.</p>
+    <label for="images">Choose the Image to be shown:</label>
+    <select id="images">
+      <option value="images/white.jpg">white</option>
+      <option value="images/lightblue.jpg">light blue</option>
+      <option value="images/lightgold.jpg">light gold</option>
+    </select>
+    <button id="show">Change 1 backgroup image</button>
+
+
+  
+    
+      <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('service-worker.js');
+        }
+
+	      document.querySelector('#show').addEventListener('click', () => {
+		      
+		var iconUrl = document.getElementById("images").value;
+		if (iconUrl == 'images/lightblue.jpg' ){
+			document.body.style.backgroundImage = "url('images/lightblue.jpg')";
+		} else if (iconUrl == 'images/lightgold.jpg' ){
+			document.body.style.backgroundImage = "url('images/lightgold.jpg')";
+		} else if (iconUrl == 'images/white.jpg' ){			
+			document.body.style.backgroundImage = "url('images/white.jpg')";
+        }
+		
+		)};
+		
+
+      </script>
+
+  </body>
+</html>
